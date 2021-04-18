@@ -18,7 +18,7 @@ body{
     height:22em;
     margin-top: -15em; /*set to a negative number 1/2 of your height*/
     margin-left: 6em; /*set to a negative number 1/2 of your width*/
-    
+
     translate: translate(-50%, -50%);
     width: 400px;
     background: linear-gradient(120deg,#8dcbec,#e6e780);
