@@ -38,13 +38,17 @@ app.use(express.static(path.join(__dirname,'views')));
 app.get('/',function(req,res){
     res.sendFile(path.join(__dirname,"views","login.html"));
 });
+app.post('/',function(req,res){
+  res.sendFile(path.join(__dirname,"views","login.html"));
+});
+
 app.post('/auth',function(request,response){
     var username = request.body.userID;
   	var password = request.body.password;
 
     conn.query('SELECT * FROM users WHERE userID = ? AND user_password = ?', [username, password], function(error, results, fields) {
 			if (results.length > 0) {
-				
+				app.use(express.static(path.join(__dirname,'views2')));
         response.render('home',{user: username});
 				
 			} else {
