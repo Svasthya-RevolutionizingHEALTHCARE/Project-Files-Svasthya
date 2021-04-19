@@ -70,6 +70,22 @@ app.get('/register',function(req,res){
     res.sendFile(path.join(__dirname,"views","register.html"));
 });
 
+app.post('/register-user',function(request,response){
+  var fullname = request.body.fullname;
+  var username = request.body.userID;
+  var password = request.body.password;
+  var email = request.body.email;
+
+
+  conn.query('INSERT INTO users(userID,user_password,userName,emailid) VALUES (?,?,?,?);', [username, password,fullname,email], function(error, results, fields) {
+    response.redirect('/')
+    
+  });
+
+});
+
+
+
 app.listen(8080,function(){
     console.log("Server is listening on port 8080.");
 });
