@@ -38,11 +38,9 @@ app.use(express.static(path.join(__dirname,'views')));
 app.get('/',function(req,res){
     res.sendFile(path.join(__dirname,"views","login.html"));
 });
-app.post('/',function(req,res){
-  res.sendFile(path.join(__dirname,"views","login.html"));
-});
 
-app.post('/auth',function(request,response){
+
+app.post('/',function(request,response){
     var username = request.body.userID;
   	var password = request.body.password;
 
@@ -70,7 +68,7 @@ app.get('/register',function(req,res){
     res.sendFile(path.join(__dirname,"views","register.html"));
 });
 
-app.post('/register-user',function(request,response){
+app.post('/register',function(request,response){
   var fullname = request.body.fullname;
   var username = request.body.userID;
   var password = request.body.password;
