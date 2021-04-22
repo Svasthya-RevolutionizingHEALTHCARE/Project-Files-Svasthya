@@ -84,6 +84,36 @@ app.post('/register',function(request,response){
 
 
 
+
+app.get("/labTest", function(req, res) {
+  res.sendFile(path.join(__dirname, "views", "labTest.html"));
+});
+app.post("/labTest", function(req, res) {
+  var testname = req.body.TestID;
+  var cityname = req.body.City;
+  var timings = req.body.Timings;
+  var lab = req.body.Lab;
+
+
+  const id = testname + cityname + timings + lab;
+
+  conn.query('SELECT * FROM appointments WHERE id = ?', [id], function(error, results, fields) {
+    if (results.length > 0) {
+      app.use(express.static(path.join(__dirname, 'views2')));
+      res.sendFile(path.join(__dirname, "views", "failure.html"));
+
+    } else {
+      conn.query('INSERT INTO appointments(testname,cityname,timings,lab,id) VALUES (?,?,?,?,?);', [testname, cityname, timings, lab, id], function(error, results, fields) {
+        res.sendFile(path.join(__dirname, "views", "success.html"));
+
+      });
+    }
+  });
+
+});
+
+
+
 app.listen(8080,function(){
     console.log("Server is listening on port 8080.");
 });
