@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DOC APPOINTMENT WINDOW</title>
+  </head>
+  <body>
+    <!-- <h1><%=fullName_doc%></h1>
+    <h1><%=ID_arr_doc%></h1>
+    <h1><%=doctorType_doc%></h1>
+    <h1><%=email_doc%></h1>
+
+    <h1><%=city_doc%></h1>
+    <h1><%=country_doc%></h1> -->
+    <h1>DOCTOR APPOINTMENT WINDOW</h1>
+    <form class="" action="/doctors/doctor-list/Appointment/check" method="POST">
+      <div>
+
+
+      <input type="text"  name="fullName" value=<%=fullName_doc %> readonly>
+      </div>
+      <input type="text"  name="ID" value=<%=ID_arr_doc %> readonly>
+      <input type="text"  name="doctorType" value=<%=doctorType_doc %> readonly>
+      <input type="email"  name="emailAddress" value=<%=email_doc %> readonly>
+      <input type="text"  name="city" value=<%=city_doc %> readonly>
+      <input type="text"  name="country" value=<%=country_doc %> readonly>
+      <input type="text"  name="userID" value="" placeholder="userID" required>
+      <input type="date"  name="Date" placeholder="date" required>
+      <input type="text" list="timings" name="Timings" placeholder="Timings" required>
+
+      <datalist id="timings">
+        <option value="1000">
+        <option value="1100">
+        <option value="1200">
+        <option value="1400">
+        <option value="1500">
+        <option value="1600">
+        <option value="1700">
+        <option value="1800">
+        <option value="1900">
+        <option value="2000">
+      </datalist>
+      <div>
+
+
+      <input type="submit" value="Check Availability">
+      </div>
+    </form>
+  </body>
+</html>

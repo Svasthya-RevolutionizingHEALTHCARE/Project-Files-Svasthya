@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Fetch using MySQL and Node.js</title>
+</head>
+<body>
+    <div class="table-data">
+<h2>Display Data using Node.js & MySQL</h2>
+    <table border="1">
+        <tr>
+            <th>S.N</th>
+            <th>
+              ID
+              </th>
+            <th>Doctor Speciality</th>
+            <th>Full Name</th>
+            <th>Email Address</th>
+            <th>City</th>
+            <th>Country</th>
+            <th>Appointment</th>
+
+        </tr>
+
+        <%
+        if(doctorData.length!=0){
+        var i=1;
+        doctorData.forEach(function(data){
+        %>
+        <form action="/doctors/doctor-list/Appointment" method="POST">
+
+
+        <tr>
+            <td><%=i; %></td>
+            <td><input type="text"  name="ID" value=<%=data.ID %> readonly>
+
+              </td>
+            <td> <input type="text"  name="doctorType" value=<%=data.doctortype %> readonly></td>
+            <td><input type="text"  name="fullName" value=<%=data.fullName %> readonly></td>
+
+            <td><input type="email"  name="emailAddress" value=<%=data.emailAddress %> readonly></td>
+            <td><input type="text"  name="city" value=<%=data.city %> readonly></td>
+            <td><input type="text"  name="country" value=<%=data.country %> readonly></td>
+
+
+            <td><button type="submit" name="button" value=<%=data.ID%>>Fix Appointment</button></td>
+
+
+        </tr>
+        <%  i++; }) %>
+        <% } else{ %>
+            <tr>
+                <td colspan="7">No Data Found</td>
+            </tr>
+        <% } %>
+        </form>
+    </table>
+    </div>
+</body>
+</html>
