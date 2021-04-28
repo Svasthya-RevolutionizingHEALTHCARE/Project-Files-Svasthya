@@ -19,22 +19,36 @@
   <div class="labTest-form">
     <h1>Lab Testing</h1>
     <form action="/labTest" method="POST" autocomplete="off">
+      <input type="text" name="userID" placeholder="USERID" required>
       <input type="text" name="TestID" placeholder="TestName" required>
       <input type="text" name="City" placeholder="City" required>
       <input type="text" list="timings" name="Timings" placeholder="Timings" required>
       <datalist id="timings">
-        <option value="10:00">
-        <option value="11:00">
-        <option value="12:00">
-        <option value="14:00">
-        <option value="15:00">
-        <option value="16:00">
-        <option value="17:00">
-        <option value="18:00">
-        <option value="19:00">
-        <option value="20:00">        
+        <option value="1000">
+        <option value="1100">
+        <option value="1200">
+        <option value="1400">
+        <option value="1500">
+        <option value="1600">
+        <option value="1700">
+        <option value="1800">
+        <option value="1900">
+        <option value="2000">
       </datalist>
-      <input type="text" name="Lab" placeholder="Lab" required>
+      <input type="text" list="labs" name="Lab" placeholder="Lab" required>
+      <datalist id="labs">
+        <option value=" DR LAL PATHLABS">
+        <option value="SRL DIAGNOSTICS">
+        <option value="SUBURBAN DIAGNOSTICS">
+        <option value="THYROCARE">
+        <option value="MEDALL HEALTHCARE PVT LTD">
+        <option value="ONCQUEST LABORATORIES LIMITED">
+        <option value="HITECH DIAGNOSTIC CENTRE">
+        <option value="VIJAYA DIAGNOSTIC CENTRE">
+        <option value="LUCID MEDICAL DIAGNOSTICS">
+        <option value="METROPOLIS">
+      </datalist>
+      <input type="date" name="Date" placeholder="date" required>
       <br><br>
       <input type="submit" value="Check Availability">
     </form>

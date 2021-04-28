@@ -43,21 +43,21 @@
             <li class="nav-itemer">
               <a class="nav-linker"><i class="far fa-user"></i>  Welcome <%=user%></a>
             </li>
-            
+
             <li class="nav-item">
               <button type="button" class="btn btn-dark btn-lg download-button" id="setting"><a class="nav-linker">Settings</a></button>
             </li>
             <li class="nav-item">
-              
-              <form method="post" action="/">
+
+              <form method="GET" action="/">
                 <button type="submit" class="btn btn-dark btn-lg download-button" id="logout"><div class="nav-linker">Logout</div></button>
             </form>
 
               <!-- <button type="button" class="btn btn-dark btn-lg download-button" id="logout"><a class="nav-linker" href="/">Logout</a></button> -->
-            
+
             </li>
           </ul>
-            
+
         </div>
       </nav>
 
@@ -66,16 +66,18 @@
       <h1 class="big-heading">You Choose, We Offer</h1>
       <div class="row">
 
-        
-          
-          
+
+
+
           <div class="col">
-          <button type="button" class="btn btn-outline-light btn-lg download-button"><i class="fas fa-user-md fa-2x"></i> Doctor Appointment</button>
+
+          <a href="labTest" class="labTest"><button type="button" class="btn btn-outline-light btn-lg download-button"><i class="fa fa-flask fa-2x"></i> Book Lab Test</button></a>
+          <a href="doctor" class="doctor"><button type="button" class="btn btn-outline-light btn-lg download-button"><i class="fas fa-user-md fa-2x"></i> Doctor Appointment</button></a>
           <button type="button" class="btn btn-outline-light btn-lg download-button"><i class="fas fa-cart-plus fa-2x"></i> Order Medicine</button>
-          <a href="labTest" class="labTest"><button type="button" class="btn btn-outline-light btn-lg download-button"><i class="fa fa-flask fa-2x"></i></i> Book Lab Test</button></a>
+
         </div>
 
-        
+
 
       </div>
 
@@ -120,17 +122,11 @@
       <i class="social-icon fab fa-facebook-f fa-2x"></i>
       <i class="social-icon fab fa-twitter fa-2x"></i>
       <i class="social-icon fab fa-instagram fa-2x"></i>
-      
+
       <p class="copyright">© Copyright 2021 Svasthya-Dev</p>
-      
+
     </div>
   </footer>
 
   </body>
   </html>
-
-
- 
-
-  
-
