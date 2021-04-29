@@ -3,7 +3,7 @@ body{
     padding: 0;
     
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background: linear-gradient(120deg,#2980b0,#8e44ad);
+    background: linear-gradient(120deg,#f88440,#c25dd6);
     height: 100vh;
     overflow: hidden;
 }
@@ -21,7 +21,7 @@ body{
 
     translate: translate(-50%, -50%);
     width: 600px;
-    background: linear-gradient(120deg,#8dcbec,#e6e780);
+    background: linear-gradient(120deg,#f88440,#c25dd6);
     border-radius: 10px;
 
     /* width: 300px;
